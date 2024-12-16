@@ -1,4 +1,4 @@
-import './component/style.css'
+import './App.css'
 import Vmp from './component/vmp';
 
 function App() {
