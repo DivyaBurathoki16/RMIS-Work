@@ -1,0 +1,300 @@
+/* Body Background for Light Theme */
+body {
+  background-color: #fdfcfa;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+
+  /* Center content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Section Styling */
+.team-section {
+  text-align: center;
+  position: relative; /* For proper z-index handling */
+  width: 100%;
+}
+
+/* Heading */
+.team-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #020202; /* Dark font for contrast */
+}
+
+/* Container for Cards */
+
+
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center; /* Centers cards vertically within the container */
+  position: relative;
+  transition: filter 0.8s ease;
+  
+}
+
+
+
+/* Card Styling */
+.team-card {
+  background-color: #d1eff1;
+  border: 2px solid #d1eff1; /* Outline stroke with increased weight */
+  border-radius: 20px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 2s ease, box-shadow 1s ease, z-index 1s ease, width 1s ease, height 1s ease, filter 1s ease;
+  position: relative;
+  z-index: 1;
+  overflow: hidden; /* Prevent content overflow */
+}
+
+/* Hover Effect for Enlarging the Card with Delay */
+
+
+.team-card:hover {
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1); /* Smooth Bezier curve */
+  transform: scale(1.2); /* Slightly enlarges the card */
+  z-index: 10; /* Brings the card to the front */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* Slightly deeper shadow */
+  align-items: center; /* Ensures content stays centered */
+}
+
+
+/* Reveal more info */
+.team-card:hover .team-description {
+  max-height: 200px; /* Expands the description */
+  opacity: 1;
+  transition: max-height 4s ease,min-height 2s ease-out; /* Slower transition for description reveal */
+  transition-delay: 0.1s; /* Delay the reveal */
+}
+
+/* Image Styling */
+.team-image img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #d1eff1;
+  object-fit: cover;
+  margin-bottom: 15px;
+  transition: transform 1s ease; /* Make the image zoom transition slower */
+}
+
+.team-card:hover .team-image img {
+  transform: scale(1.1); /* Slight zoom for the image */
+  transition-delay: 0.1s; /* Delay the zoom effect */
+}
+
+/* Text Styling */
+.team-description {
+  font-size: 0.9rem;
+  color: #020202;
+  margin: 10px 0;
+  max-height: 0; /* Initially hidden */
+  /* Initially transparent */
+  overflow: hidden; /* Prevents overflowing text */
+}
+
+.team-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0d324d;
+}
+
+.team-role {
+  font-size: 1rem;
+  color: #7f5a83;
+  font-style: italic;
+}
+
+
+@media screen and (max-width: 768px) {
+  
+  .team-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #020202; /* Dark font for contrast */
+    position: relative;
+    bottom: 100px;
+  }
+
+  .team-container {
+    display: flex;
+    flex-direction: row; /* Arrange items in a single row */
+    justify-content: space-between; /* Distribute items evenly */
+    align-items: center; /* Align items vertically */
+    flex-wrap: nowrap; /* Prevent wrapping to next line */
+    overflow-x: auto; /* Add horizontal scroll if needed */
+    gap: 10px; /* Reduce spacing between team members */
+    padding: 0 10px; /* Add horizontal padding */
+    margin-right: 50px;
+    position:relative;
+    left: 24px;
+    bottom: 100px;
+  }
+
+  .team-card {
+    background: none; /* Remove card background */
+    border: none; /* Remove card border */
+    box-shadow: none; /* Remove card shadow */
+    text-align: center; /* Align text below images */
+    width: 100px; /* Reduce width to fit on smaller screens */
+    flex: 0 0 auto; /* Prevent shrinking */
+    padding: 0; /* Remove padding */
+    transform: none; /* Remove scaling effects */
+    transition: none;
+   
+  }
+
+  .team-image img {
+    width: 90px; /* Set a smaller image size */
+    height: 90px;
+    border-radius: 50%; /* Circular images */
+    border: 2px solid #66d4e0; /* Add border for styling */
+    object-fit: cover; /* Keep image aspect ratio */
+    margin-bottom: 5px; /* Space below image */
+  }
+
+  .team-name {
+    font-size: 0.9rem;
+    background-color:#d1eff1;
+    border: 2px solid #15d9e7; /* Smaller font size */
+    border-radius: 40px;
+    padding: 2px;
+  }
+
+  .team-role {
+    font-size: 0.8rem;
+    background-color:#d1eff1;
+    border-radius: 40px;
+    padding: 2px;
+  }
+
+  .team-card:hover {
+    transform: none;
+    transition: none;
+    box-shadow: none; /* Remove hover scaling */
+  }
+  .team-card:hover .team-description {
+    transition: none;
+    max-height: 0px; /* Slower transition for description reveal */ /* Delay the reveal */
+  }
+
+  .team-card:hover .team-image img {
+    transform: none; /* Slight zoom for the image */
+ /* Delay the zoom effect */
+  }
+
+
+  .team-heading {
+    font-size: 1.5rem; /* Reduce heading size */
+    text-align: center; /* Center heading */
+    margin-bottom: 20px; /* Add spacing below heading */
+  }
+
+  
+}
+
+
+@media screen and (max-width: 375px) {
+  
+
+  .team-container {
+    display: flex;
+    flex-direction: row; /* Arrange items in a single row */
+    justify-content: space-between; /* Distribute items evenly */
+    align-items: center; /* Align items vertically */ /* Prevent wrapping to next line */
+    overflow-x: hidden; /* Add horizontal scroll if needed */
+    gap: 10px; /* Reduce spacing between team members */
+    padding: 0 10px; /* Add horizontal padding */
+    position:relative;
+    left: 20px;
+  }
+
+  .team-card {
+    background: none; /* Remove card background */
+    border: none; /* Remove card border */
+    box-shadow: none; /* Remove card shadow */
+    text-align: center; /* Align text below images */
+    width: 90px; /* Reduce width to fit on smaller screens */
+    flex: 0 0 auto; /* Prevent shrinking */
+    padding: 0; /* Remove padding */
+    transform: none; /* Remove scaling effects */
+    transition: none;
+  }
+
+  .team-image img {
+    width: 80px; /* Set a smaller image size */
+    height: 80px;
+    border-radius: 50%; /* Circular images */
+    border: 2px solid #66d4e0; /* Add border for styling */
+    object-fit: cover; /* Keep image aspect ratio */
+    margin-bottom: 2px; /* Space below image */
+  }
+
+  .team-name {
+    font-size: 0.8rem;
+    background-color:#d1eff1;
+    border: 2px solid #15d9e7; /* Smaller font size */
+    border-radius: 40px;
+    padding: 2px;
+    margin-top: -9px;
+  }
+
+  .team-role {
+    font-size: 0.8rem;
+    background-color:#d1eff1;
+    border-radius: 40px;
+    padding: 2px;
+  }
+
+  .team-card:hover {
+    transform: none;
+    transition: none;
+    box-shadow: none; /* Remove hover scaling */
+  }
+  .team-card:hover .team-description {
+    transition: none;
+    max-height: 0px; /* Slower transition for description reveal */ /* Delay the reveal */
+  }
+
+  .team-card:hover .team-image img {
+    transform: none; /* Slight zoom for the image */
+ /* Delay the zoom effect */
+  }
+
+
+  .team-heading {
+    font-size: 1.5rem; /* Reduce heading size */
+    text-align: center; /* Center heading */
+    margin-bottom: 20px; /* Add spacing below heading */
+  }
+
+  
+}
+
+@media screen and (max-width: 430px) {
+  .team-container {
+    display: flex;
+    flex-direction: row; /* Arrange items in a single row */
+    justify-content: space-between; /* Distribute items evenly */
+    align-items: center; /* Align items vertically */ /* Prevent wrapping to next line */
+    overflow-x: hidden; /* Add horizontal scroll if needed */
+    gap: 10px; /* Reduce spacing between team members */
+    padding: 0 10px; /* Add horizontal padding */
+    position:relative;
+    left: 29px;
+  }
+}
+
