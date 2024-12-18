@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100..900&family=Montserrat:wght@100..900&family=Roboto:wght@100..900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #FDFCFA;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; 
+}
+
+.button a{
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Ensure content flows vertically */
+  min-height: 100vh;
+  margin: 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 50px;
+  min-height: 100vh;
+  text-align: center;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  width: 100%; /* Ensure content doesn't overflow horizontally */
+}
+
+.image {
+  flex: 1;
+  width: 350px;
+  max-width: 100%;
+  height: auto;
+  margin-left: 100px; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image:hover {
+  transform: scale(1.05);
+}
+
+.text {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%; /* Ensure text does not overflow */
+  margin-left: 350px;
+}
+
+.Mobileheading{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  letter-spacing: 7px;
+  color: black;
+  margin-top: 0;
+  width: 100%; /* Ensure it spans full width */
+  text-align: center;
+  position: relative; /* Maintain normal flow for now */
+  top: 0; /* Align it to the top */
+  display: none;
+}
+
+.heading h1{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  letter-spacing: 7px;
+  color: black;
+  margin-top: 0;
+  width: 100%; /* Ensure it spans full width */
+  text-align: center;
+  position: relative; /* Maintain normal flow for now */
+  top: 0; /* Align it to the top */
+  display: block; /* Explicitly set block behavior */
+}
+
+.para {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 27px;
+  color: black;
+  line-height: 1.6;
+  word-spacing: 5px;
+  letter-spacing: 2px;
+  margin-top: 20px;
+}
+
+li {
+  list-style: none;
+}
+
+.button {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 30px;
+  text-decoration: none;
+}
+
+.button button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  word-spacing: 5px;
+  letter-spacing: 3px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: block;
+  
+}
+
+.button button:hover {
+  background-color: white;
+  color: black;
+}
+
+
+.Mobilebutton button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  word-spacing: 5px;
+  letter-spacing: 3px;
+  display: none;
+}
+
+.Mobilebutton {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 30px;
+  display: none;
+  text-decoration: none;
+}
+
+.Mobilebutton button:hover {
+  background-color: white; /* Hover effect for mobile button */
+  color: black;
+}
+
+
+@media screen and (max-width: 834px) and (min-width: 768px) {
+  .text {
+    margin-left: 0;
+
+    text-align: center;
+  
+  }
+  .Mobileheading{
+    font-size: 20px;
+    width: 100%;
+    display: block;
+ 
+  }
+  .content {
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 10px;
+    min-height: 25vh;
+  }
+
+  .image img{
+    margin-left: 0;
+    max-width: 20rem;
+    border-radius: 50%;
+  }
+  .heading{
+    display: none;
+  }
+  .para {
+    font-size: 15px;
+  }
+  .button{
+    justify-content: center;
+    display: block;
+  }
+  .button button:focus {
+  outline: 2px solid #000; /* Visible focus indicator */
+}
+
+  
+}
+
+@media screen and (max-width: 834px) and (min-width: 768px) {
+  .text {
+    margin-left: 0;
+    padding: 20px;
+    text-align: center;
+  }
+  .image {
+    margin-left: 0;
+    width: 80%;
+    max-width: 400px;
+  }
+  .heading h1 {
+    font-size: 35px;
+  }
+  .para {
+    font-size: 22px;
+  }
+  .button {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 896px) and (min-width: 414px) {
+  body {
+    padding: 10px; /* Add padding for smaller screens */
+  }
+  
+  .content {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;   /* Center-align elements */
+    padding: 10px;
+    min-height: 50vh; /* Adjust height for better balance */
+    gap: 20px;        /* Add spacing between elements */
+  }
+
+  .image {
+    margin-left: 0;
+    width: 80%; /* Scale down the image for smaller screens */
+    max-width: 300px;
+    border-radius: 50%; /* Circular image */
+    transition: transform 0.3s ease;
+  }
+
+  .image img {
+    width: 100%;
+    max-width: 100%; /* Ensure the image scales properly */
+    border-radius: 50%; /* Keep image circular */
+  }
+
+  .Mobileheading {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px; /* Adjust font size for better readability */
+    letter-spacing: 2px; /* Reduce letter spacing slightly */
+    text-align: center;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .heading {
+    display: none; /* Hide the larger heading */
+  }
+
+  .text {
+    margin-left: 0;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px; /* Adjust base font size for smaller screens */
+  }
+
+  .para {
+    font-size: 16px; /* Slightly larger for readability */
+    line-height: 1.6;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+    text-align: justify; /* Better text alignment */
+    padding: 0 10px; /* Add padding for text */
+  }
+
+  .button {
+    justify-content: center;
+    margin-top: 15px;
+    display: flex;
+    gap: 10px; /* Add spacing between buttons */
+  }
+
+  .button button {
+    padding: 10px 20px;
+    font-size: 16px; /* Reduce button font size */
+    border-radius: 10px;
+  }
+
+  .Mobilebutton {
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Stretch button across screen width */
+  }
+
+  .Mobilebutton button {
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 410px) and (min-width: 375px) {
+  body {
+    padding: 10px; /* Add padding for smaller screens */
+  }
+  
+  .content {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;   /* Center-align elements */
+    padding: 10px;
+    min-height: 50vh; /* Adjust height for better balance */
+    gap: 20px;        /* Add spacing between elements */
+  }
+
+  .image {
+    margin-left: 0;
+    width: 90%; /* Scale down the image for smaller screens */
+    max-width: 150px;
+    border-radius: 50%; /* Circular image */
+    transition: transform 0.3s ease;
+  }
+
+  .image img {
+    width: 100%;
+    max-width: 100%; /* Ensure the image scales properly */
+    border-radius: 50%; /* Keep image circular */
+  }
+
+  .Mobileheading {
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px; /* Adjust font size for better readability */
+    letter-spacing: 2px; /* Reduce letter spacing slightly */
+    text-align: center;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .heading {
+    display: none; /* Hide the larger heading */
+  }
+
+  .text {
+    margin-left: 0;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px; /* Adjust base font size for smaller screens */
+  }
+
+  .para {
+    font-size: 12px; /* Slightly larger for readability */
+    line-height: 1.6;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+    text-align: justify; /* Better text alignment */
+    padding: 0 10px; /* Add padding for text */
+  }
+
+  .button {
+    justify-content: center;
+    margin-top: 15px;
+    display: flex;
+    gap: 10px; /* Add spacing between buttons */
+  }
+
+  .button button {
+    padding: 10px 20px;
+    font-size: 12px; /* Reduce button font size */
+    border-radius: 10px;
+  }
+
+  .Mobilebutton {
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Stretch button across screen width */
+  }
+
+  .Mobilebutton button {
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    width: auto;
+  }
+}
+
